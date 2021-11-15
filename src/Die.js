@@ -4,11 +4,12 @@ import "./Die.css";
 class Die extends Component {
     render() {
         return (
-            <div className="Die-comp">
-                <i className={`Die fas fa-dice-${this.props.face}`}></i>
-            </div>
+            <i
+                className={`Die fas fa-dice-${this.props.face} ${
+                    this.props.rolling && "shaking"
+                }`}
+            />
         );
     }
 }
-
 export default Die;
